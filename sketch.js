@@ -29,22 +29,23 @@ function main() {
 	var midY = random(0, height);
 
 	this.init = function() {
-			// // First circle
-			// posX.push(width/2);
-			// posY.push(height/4);
+		fill('#c0392b');
+			// First circle
+			posX.push(width/2);
+			posY.push(height/4);
 
-			// // Second Circle
-			// posX.push(width/6);
-			// posY.push(height/1.2);
+			// Second Circle
+			posX.push(width/6);
+			posY.push(height/1.2);
 
-			// // Third Circle
-			// posX.push(width/1.2);
-			// posY.push(height/1.2);
+			// Third Circle
+			posX.push(width/1.2);
+			posY.push(height/1.2);
 		
 		for (var i = 0; i < ndots; i++) {
-			fill('#c0392b');
-			posX.push(random(0,width));
-			posY.push(random(0,height));
+			// fill('#c0392b');
+			// posX.push(random(0,width));
+			// posY.push(random(0,height));
 			ellipse(posX[i], posY[i], Radius * 1.5, Radius * 1.5);
 			console.log('rolled');			
 		}
