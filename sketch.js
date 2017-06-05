@@ -1,7 +1,8 @@
 var start;
 var ndots = 3;
-var Radius = 5;
+var Radius = 2;
 var slider;
+var iteration;
 
 function setup() {
 	frameRate(25);
@@ -15,6 +16,8 @@ function setup() {
   	slider = createSlider(1, 60, 20, 1);
  	slider.position(width - 250, height + 20);
  	slider.style('width', '200px');
+ 	iteration = createElement('h3');
+ 	iteration.position(width + 20, height);
 }
 
 function draw() {
@@ -27,9 +30,9 @@ function main() {
 	var posY = [];
 	var midX = random(0, width);
 	var midY = random(0, height);
+	var count = 3;
 
 	this.init = function() {
-		fill('#c0392b');
 			// First circle
 			posX.push(width/2);
 			posY.push(height/4);
@@ -43,12 +46,10 @@ function main() {
 			posY.push(height/1.2);
 		
 		for (var i = 0; i < ndots; i++) {
-			// fill('#c0392b');
-			// posX.push(random(0,width));
-			// posY.push(random(0,height));
-			ellipse(posX[i], posY[i], Radius * 1.5, Radius * 1.5);
-			console.log('rolled');			
+			fill('#c0392b');
+			ellipse(posX[i], posY[i], Radius * 3, Radius * 3);
 		}
+		console.log('rolled');			
 		fill(255);
 	}
 
@@ -79,6 +80,8 @@ function main() {
 	this.start = function() {
 		var die = Math.floor((Math.random() * ndots) + 1);
 		paint(die-1);
+		count ++;
+		iteration.html('Dots = ' + count);
 	}
 }
 
