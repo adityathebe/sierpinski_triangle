@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chaos Game</title>
+    <meta charset="UTF-8">
+
+    <script language="javascript" src="libraries/p5.js"></script>
+    <script language="javascript" src="libraries/p5.dom.js"></script>
+    <script language="javascript" src="libraries/p5.sound.js"></script>
+    <script language="javascript" src="sketch.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+    <style type="text/css">
+
+    	body{
+            background-color: #333333;
+    		padding:10px;
+            color: white;
+            font-family: 'Poiret One', cursive;
+    	}
+    	#left_side {
+    		text-align: justify;
+    		font-size: 18px;
+    	}
+
+    	h1 {
+    		margin-top: 500px;
+    	}
+    </style>
+</head>
+<body>
+<h1>The Chaos Game</h1>
+<p id='left_side'>
+
+The chaos game is played as follows. First, draw a triangle <i>(any triangle works---right, equilateral, isosceles, whatever). <br></i>Name the three vertices (1,2), (3,4) and (5,6) respectively.
+<br><br>
+
+Next, pick a point that's inside the triangle <i>(actually you can take it anywhere even outside the triangle)</i>. This point is called <b>"seed"</b>. <br>
+Now, take a die and roll it. Depending on what value comes up, move the seed half the distance to the appropriate vertex. Now the seed changes to the new position. That is, if '1' comes up, move the point half the distance to the (1,2) vertex. 
+<br>Continue the process. That is, roll the die again and move the new point half the distance to the appropriate vertex.
+
+
+
+<br><br>The goal of the chaos game is to roll the die many hundreds of times and predict what the resulting pattern of points will be. Most students who are unfamiliar with the game guess that the resulting image will be a random smear of points. Others predict that the points will eventually fill the entire triangle. Both guesses are quite natural, given the random nature of the chaos game. But both guesses are completely wrong. The resulting image is anything but a random smear; with probability one, the points form what mathematicians call the Sierpinski triangle.
+</p>
+	
+</body>
+</html>
