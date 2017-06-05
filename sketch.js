@@ -3,6 +3,7 @@ var ndots = 3;
 var Radius = 2;
 var slider;
 var iteration;
+var fRate;
 
 function setup() {
 	frameRate(25);
@@ -18,6 +19,8 @@ function setup() {
  	slider.style('width', '200px');
  	iteration = createElement('h3');
  	iteration.position(width + 20, height);
+ 	fRate = createElement('h4');
+ 	fRate.position(width + 20, height + 25);
 }
 
 function draw() {
@@ -82,6 +85,7 @@ function main() {
 		paint(die-1);
 		count ++;
 		iteration.html('Dots = ' + count);
+		fRate.html('Frame Rate = ' + slider.value() + " fps");
 	}
 }
 
